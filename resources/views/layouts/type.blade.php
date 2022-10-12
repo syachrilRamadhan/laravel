@@ -11,6 +11,7 @@
         <tr>
             <th>No</th>
             <th>Name</th>
+            <th>Produk</th>
         </tr>
     </thead>
     <tbody>
@@ -18,6 +19,11 @@
         <tr>
             <td>{{$loop->iteration}}</td>
             <td>{{$data->name}}</td>
+            <td>
+                @foreach($data->produk as $item)
+                - {{$item->name}} <br>
+                @endforeach
+            </td>
         </tr>
         @endforeach
     </tbody>

@@ -10,7 +10,7 @@ class TypeController extends Controller
    
     public function index()
     {
-        $type = Type::all();
+        $type = Type::with('produk')->get();
         return view('/layouts/type',['typeList' => $type]);
     }
 

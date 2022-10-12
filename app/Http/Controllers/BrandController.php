@@ -12,6 +12,7 @@ class BrandController extends Controller
     {
         $brand = Brand::with('produk')->get();
         return view('/layouts/brand', ['brandList' => $brand]);
+        
     }
 
    

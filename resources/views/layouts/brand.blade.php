@@ -17,7 +17,12 @@
         <tr>
             <td>{{$loop->iteration}}</td>
             <td>{{$data->name}}</td>
-            <td>{{$data->produk}}</td>
+            <!-- <td>{{$data->produk}}</td> -->
+            <td>
+                @foreach($data->produk as $produk)
+                {{$produk['name']}}
+                @endforeach
+            </td>
         </tr>
         @endforeach
     </tbody>
